@@ -40,10 +40,13 @@ INSTALLED_APPS = [
 
     #local apps 
     'todos',
+    'accounts',
 
     # 3rd party apps
     'rest_framework',
 ]
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # permissions 
 REST_FRAMEWORK = {
