@@ -8,9 +8,11 @@ from .models import Todo
 # Create your views here.
 
 class TodoListView(generics.ListAPIView):
+    permission_classes = [IsAuthor]
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
 
 class TodoDetailView(generics.RetrieveUpdateDestroyAPIView):
+    perimission_classes = [IsAuthor]
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
