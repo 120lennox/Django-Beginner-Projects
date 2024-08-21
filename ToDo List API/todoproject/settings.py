@@ -52,7 +52,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES":[
-        "rest_frameowrk.permissions.IsAuthenticated"
+        "todos.permissions.IsAuthor"
     ],
 }
 

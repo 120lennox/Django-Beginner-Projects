@@ -13,6 +13,6 @@ class TodoListView(generics.ListAPIView):
     serializer_class = TodoSerializer
 
 class TodoDetailView(generics.RetrieveUpdateDestroyAPIView):
-    perimission_classes = [IsAuthor]
+    permission_classes = [IsAuthor]
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
